@@ -1,0 +1,14 @@
+<h1>liste des livres</h1>
+<ul *ngFor="let livre of livres">
+    <li>{{livre.titre}} - {{livre.auteur}} - {{livre.annee}}</li>
+</ul>
+<h2>ajouter un livre</h2>
+
+<form (ngSubmit)="ajoutlivre()">
+
+<input type="text" name="titre" [(ngModel)]="livrevide.titre" placeholder="Titre">
+<input type="text" name="auteur" [(ngModel)]="livrevide.auteur" placeholder="Auteur">
+<input type="text" name="annee" [(ngModel)]="livrevide.annee"   placeholder="Année">
+<button (click)="ajoutlivre()">ajouter</button>
+
+</form>
